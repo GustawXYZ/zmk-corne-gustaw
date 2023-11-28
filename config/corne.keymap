@@ -51,6 +51,7 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
+
 / {
     behaviors {
         bhm: balanced_homerow_mods {
@@ -77,10 +78,10 @@
 
         default_layer {
             bindings = <
-&kp TAB     &kp Q  &kp W        &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O        &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &bhm LCTRL S &bhm LGUI D &bhm LALT F &kp G    &kp H  &bhm LALT J &bhm LGUI K &bhm LCTRL L &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X        &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHIFT
-                                &mo 3       &kp SPACE   &mo 2    &mo 1  &kp RET     &kp RALT
+&kp TAB     &kp Q  &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O         &kp P     &kp BSPC
+&kp ESCAPE  &kp A  &bhm LCTRL S  &bhm LGUI D  &bhm LALT F  &kp G    &kp H  &bhm LALT J  &bhm LGUI K  &bhm LCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH  &kp RSHIFT
+                                 &mo 3        &kp SPACE    &mo 2    &mo 1  &kp RET      &kp RALT
             >;
 
             label = "def";
@@ -110,10 +111,10 @@
 
         os_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F1  &kp LS(LG(N7))  &kp LS(LG(N8))  &kp LS(LG(N9))  &kp F4    &kp F7  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp F10  &trans
-&to 0          &kp F2  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp LS(LG(N6))  &kp F5    &kp F8  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &kp F11  &trans
-&kp LC(LG(W))  &kp F3  &kp LG(LS(N1))  &kp LS(LG(N2))  &kp LS(LG(N3))  &kp F6    &kp F9  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp F12  &trans
-                                       &trans          &trans          &trans    &trans  &trans      &trans
+&kp LC(LG(Q))  &kp F1  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp F4    &kp F7  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &kp F10  &trans
+&to 0          &kp F2  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &kp F5    &kp F8  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &kp F11  &trans
+&kp LC(LG(W))  &kp F3  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp F6    &kp F9  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &kp F12  &trans
+                                   &trans      &trans      &trans    &trans  &trans          &trans
             >;
 
             label = "os";
