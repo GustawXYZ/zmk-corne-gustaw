@@ -51,6 +51,16 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
+bht: balanced_hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    label = "REQUIRE_PRIOR_IDLE";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <200>;
+    bindings = <&kp>, <&kp>;
+};
 
 / {
     chosen {
@@ -65,7 +75,7 @@
         default_layer {
             bindings = <
 &kp TAB     &kp Q  &kp W        &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O        &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &pht LCTRL S &phtLGUI D  &pht LALT F &kp G    &kp H  &pht LALT J &pht LGUI K &pht LCTRL L &kp SEMI  &kp SQT
+&kp ESCAPE  &kp A  &bht LCTRL S &bhtLGUI D  &bht LALT F &kp G    &kp H  &bht LALT J &bht LGUI K &bht LCTRL L &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z  &kp X        &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHIFT
                                 &mo 3       &kp SPACE   &mo 2    &mo 1  &kp RET     &kp RALT
             >;
