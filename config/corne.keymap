@@ -63,15 +63,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
 &kp TAB     &kp Q  &kp W        &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O        &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &mt LCTRL S  &mt LGUI D  &mt LALT F  &kp G    &kp H  &mt LALT J  &mt LGUI K  &mt LCTRL L  &kp SEMI  &kp SQT
+&kp ESCAPE  &kp A  &pht LCTRL S &phtLGUI D  &pht LALT F &kp G    &kp H  &pht LALT J &pht LGUI K &pht LCTRL L &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z  &kp X        &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHIFT
                                 &mo 3       &kp SPACE   &mo 2    &mo 1  &kp RET     &kp RALT
             >;
@@ -80,12 +74,6 @@
         };
 
         move_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &kp CAPSLOCK  &trans  &trans    &trans     &trans     &trans       &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
 &to 0         &trans  &kp BSLH  &kp MINUS  &kp PLUS   &kp GRAVE    &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
@@ -97,12 +85,6 @@
         };
 
         number_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &kp TAB  &trans  &kp N7  &kp N8  &kp N9  &kp LBRC    &kp RBRC  &kp AMPS         &kp STAR   &kp LPAR   &trans    &trans
 &to 0    &kp N0  &kp N4  &kp N5  &kp N6  &kp LPAR    &kp RPAR  &kp DLLR         &kp PRCNT  &kp CARET  &kp RPAR  &trans
