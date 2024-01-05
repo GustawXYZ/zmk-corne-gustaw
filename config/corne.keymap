@@ -89,10 +89,10 @@
 
         move_layer {
             bindings = <
-&kp CAPSLOCK  &kp BSLH  &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
-&to 0         &kp DOT   &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
-&trans        &trans    &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
-                                &trans  &trans  &to 5        &trans        &trans        &trans
+&trans  &kp BSLH  &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
+&to 0   &kp DOT   &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
+&trans  &trans    &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
+                          &trans  &trans  &to 5        &trans        &trans        &trans
             >;
 
             label = "mov";
