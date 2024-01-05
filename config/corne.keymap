@@ -89,10 +89,10 @@
 
         move_layer {
             bindings = <
-&kp CAPSLOCK  &trans  &trans    &trans     &trans     &trans       &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
-&to 0         &trans  &kp BSLH  &kp MINUS  &kp PLUS   &kp GRAVE    &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
-&trans        &trans  &kp PIPE  &kp UNDER  &kp EQUAL  &kp TILDE    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
-                                &trans     &trans     &to 5        &trans        &trans        &trans
+&kp CAPSLOCK  &kp BSLH  &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
+&to 0         &kp DOT   &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
+&trans        &trans    &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
+                                &trans  &trans  &to 5        &trans        &trans        &trans
             >;
 
             label = "mov";
@@ -100,10 +100,10 @@
 
         number_layer {
             bindings = <
-&kp TAB  &trans  &kp N7  &kp N8  &kp N9  &kp LBRC    &kp RBRC  &kp AMPS         &kp STAR   &kp LPAR   &trans    &trans
-&to 0    &kp N0  &kp N4  &kp N5  &kp N6  &kp LPAR    &kp RPAR  &kp DLLR         &kp PRCNT  &kp CARET  &kp RPAR  &to 4
-&trans   &trans  &kp N1  &kp N2  &kp N3  &kp LBKT    &kp RBKT  &kp EXCLAMATION  &kp AT     &kp HASH   &trans    &trans
-                         &trans  &trans  &trans      &to 5     &trans           &trans
+&kp CAPS  &trans     &trans     &kp LBRC  &kp RBRC  &trans       &trans    &kp AMPS         &kp STAR   &kp LPAR   &trans    &trans
+&to 0     &kp PLUS   &kp MINUS  &kp LPAR  &kp RPAR  &kp GRAVE    &kp BSLH  &kp DLLR         &kp PRCNT  &kp CARET  &kp RPAR  &to 4
+&trans    &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp TILDE    &kp PIPE  &kp EXCLAMATION  &kp AT     &kp HASH   &trans    &trans
+                                &trans    &trans    &trans       &to 5     &trans           &trans
             >;
 
             label = "num";
