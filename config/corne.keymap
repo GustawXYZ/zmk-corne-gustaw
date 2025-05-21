@@ -87,7 +87,7 @@
 &kp PAGE_UP    &kp STAR   &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
 &to 0          &kp PLUS   &kp N4  &kp N5  &kp N6  &kp DOT      &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
 &kp PAGE_DOWN  &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
-                                  &trans  &kp N0  &trans       &trans        &trans        &trans
+                                  &trans  &kp N0  &trans       &trans        &trans        &bootloader
             >;
 
             label = "mov";
@@ -95,10 +95,10 @@
 
         number_layer {
             bindings = <
-&kp CAPS  &trans     &trans     &kp LBRC  &kp RBRC  &trans       &trans    &kp AMPS         &kp STAR   &kp LPAR   &trans  &trans
-&to 0     &kp PLUS   &kp MINUS  &kp LPAR  &kp RPAR  &kp GRAVE    &kp BSLH  &kp DLLR         &kp PRCNT  &kp CARET  &trans  &to 4
-&trans    &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp TILDE    &kp PIPE  &kp EXCLAMATION  &kp AT     &kp HASH   &trans  &trans
-                                &trans    &trans    &trans       &trans    &kp RPAR         &trans
+&kp CAPS  &trans     &trans     &kp LBRC     &kp RBRC  &trans       &trans    &kp AMPS         &kp STAR   &kp LPAR   &trans  &trans
+&to 0     &kp PLUS   &kp MINUS  &kp LPAR     &kp RPAR  &kp GRAVE    &kp BSLH  &kp DLLR         &kp PRCNT  &kp CARET  &trans  &to 4
+&trans    &kp EQUAL  &kp UNDER  &kp LBKT     &kp RBKT  &kp TILDE    &kp PIPE  &kp EXCLAMATION  &kp AT     &kp HASH   &trans  &trans
+                                &bootloader  &trans    &trans       &trans    &kp RPAR         &trans
             >;
 
             label = "num";
