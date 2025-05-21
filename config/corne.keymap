@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &pinctrl {
@@ -74,10 +73,10 @@
 
         default_layer {
             bindings = <
-&kp TAB     &kp Q  &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O         &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &bhm LCTRL S  &bhm LGUI D  &bhm LALT F  &kp G    &kp H  &bhm LALT J  &bhm LGUI K  &bhm LCTRL L  &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH  &kp RSHIFT
-                                 &mo 3        &kp SPACE    &mo 2    &mo 1  &kp RET      &kp RALT
+&kp TAB     &kp Q  &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U          &kp I         &kp O         &kp P     &kp BSPC
+&kp ESCAPE  &kp A  &bhm LCTRL S  &bhm LGUI D  &bhm LALT F  &kp G    &kp H  &bhm LALT J    &bhm LGUI K   &bhm LCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X         &kp C        &kp V        &kp B    &kp N  &kp M          &kp COMMA     &kp DOT       &kp FSLH  &kp RSHIFT
+                                 &mo 3        &kp SPACE    &mo 2    &mo 1  &bhm RALT RET  &kp LS(LALT)
             >;
 
             label = "def";
@@ -85,10 +84,10 @@
 
         move_layer {
             bindings = <
-&trans  &kp BSLH  &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
-&to 0   &kp DOT   &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
-&trans  &trans    &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
-                          &trans  &kp N0  &to 5        &trans        &trans        &trans
+&kp PAGE_UP    &kp STAR   &kp N7  &kp N8  &kp N9  &kp MINUS    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)           &kp LC(RIGHT)  &trans      &kp DEL
+&to 0          &kp PLUS   &kp N4  &kp N5  &kp N6  &kp DOT      &kp LEFT      &kp DOWN      &kp UP               &kp RIGHT      &kp END     &kp PSCRN
+&kp PAGE_DOWN  &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp COMMA    &kp HOME      &kp C_PP      &mt K_MUTE C_VOL_DN  &kp C_VOL_UP   &kp C_PREV  &kp C_NEXT
+                                  &trans  &kp N0  &trans       &trans        &trans        &trans
             >;
 
             label = "mov";
@@ -96,10 +95,10 @@
 
         number_layer {
             bindings = <
-&kp CAPS  &trans     &trans     &kp LBRC  &kp RBRC  &trans       &trans    &kp AMPS         &kp STAR   &kp LPAR   &trans    &trans
-&to 0     &kp PLUS   &kp MINUS  &kp LPAR  &kp RPAR  &kp GRAVE    &kp BSLH  &kp DLLR         &kp PRCNT  &kp CARET  &kp RPAR  &to 4
-&trans    &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp TILDE    &kp PIPE  &kp EXCLAMATION  &kp AT     &kp HASH   &trans    &trans
-                                &trans    &trans    &trans       &to 5     &kp RPAR         &trans
+&kp CAPS  &trans     &trans     &kp LBRC  &kp RBRC  &trans       &trans    &kp AMPS         &kp STAR   &kp LPAR   &trans  &trans
+&to 0     &kp PLUS   &kp MINUS  &kp LPAR  &kp RPAR  &kp GRAVE    &kp BSLH  &kp DLLR         &kp PRCNT  &kp CARET  &trans  &to 4
+&trans    &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp TILDE    &kp PIPE  &kp EXCLAMATION  &kp AT     &kp HASH   &trans  &trans
+                                &trans    &trans    &trans       &trans    &kp RPAR         &trans
             >;
 
             label = "num";
@@ -109,7 +108,7 @@
             bindings = <
 &kp LC(LG(Q))  &kp F1  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp F4    &kp F7  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &kp F10  &trans
 &to 0          &kp F2  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &kp F5    &kp F8  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &kp F11  &trans
-&kp LC(LG(W))  &kp F3  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp F6    &kp F9  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &kp F12  &trans
+&to 5          &kp F3  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp F6    &kp F9  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &kp F12  &trans
                                    &trans      &trans      &trans    &trans  &trans          &trans
             >;
 
@@ -129,10 +128,10 @@
 
         gaming {
             bindings = <
-&kp ESC  &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&to 0    &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp APOS
-&kp G    &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp T  &kp SPACE  &mo 6    &mo 7  &kp B  &kp GRAVE
+&kp G    &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y  &kp U    &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC  &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H  &kp J    &kp K      &kp L    &kp SEMI  &kp APOS
+&kp M    &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N  &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &to 0  &kp SPACE  &mo 6    &mo 7  &kp RET  &kp GRAVE
             >;
 
             label = "game";
@@ -140,10 +139,10 @@
 
         gaming_numbers {
             bindings = <
-&kt S      &kt W      &kp N1  &kp N7     &kp N2  &kp I     &trans  &trans  &trans  &trans  &trans  &trans
-&kt LSHFT  &kp ENTER  &kp N3  &kp N8     &kp N4  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&kt A      &kt D      &kp N5  &kp N9     &kp N6  &kp M     &trans  &trans  &trans  &trans  &trans  &trans
-                              &kt LCTRL  &trans  &trans    &trans  &trans  &trans
+&kt S      &kt W      &kp N7  &kp N8     &kp N9      &kp T     &trans  &trans  &trans  &trans  &trans  &trans
+&kt LSHFT  &kp ENTER  &kp N4  &kp N5     &kp N6      &kp G     &trans  &trans  &trans  &trans  &trans  &trans
+&kt A      &kt D      &kp N1  &kp N2     &kp N3      &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                              &kt LCTRL  &kt LSHIFT  &trans    &trans  &trans  &trans
             >;
 
             label = "game_num";
